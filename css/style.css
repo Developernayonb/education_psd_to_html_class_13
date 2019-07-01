@@ -1,0 +1,604 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: mdsalim400@gmail.com
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700|Lato:300,400,700&display=swap');
+ body {
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+    background-image: url(../images/bgi.png);
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Dosis', sans-serif;
+	font-weight: normal;
+	color: #333333;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #333333;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: #1696e7 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-carousel .owl-nav div {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	height: 40px;
+	left: 20px;
+	line-height: 40px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 40px;
+}
+.owl-carousel .owl-nav div.owl-next {
+	left: auto;
+	right: 20px;
+}
+.owl-carousel:hover .owl-nav div {
+	opacity: 1;
+	visibility: visible;
+}
+.owl-carousel .owl-nav div:hover {
+	background: #2B96CC;
+	color: #fff
+}
+
+/* scrollUp */
+#scrollUp {
+	background: #ffd338;
+	height: 35px;
+	width: 35px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 34px;
+}
+#scrollUp:hover {
+	background: #444;
+}
+
+/*============ Header Code CSS Part Start =============== */
+header{
+    background: #ffd338;
+}
+.manu ul li a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #fff !important;
+    padding: 3px 23px !important;
+    border-radius: 20px;
+    transition: .5s;
+    float: right;
+}
+.manu ul li a:hover{
+    background: #f05c5c;
+}
+/*user*/
+.user {
+    color: #fff;
+    background: #ffd338;
+    transition: .5s;
+    margin-right: 5px;
+    float: right;
+}
+
+.user:hover {
+    color: #f05c5c;
+}
+.user:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 255);
+}
+.user_menu{
+    background: #ffd338;
+    color: #fff;
+    border: 1px solid #fff;
+    left: -20px;
+    min-width: 30px;
+    padding: 0px 0px;
+}
+.user_item {
+    color: #fff;
+    transition: .5s;
+}
+.user_item:hover{
+    color: #f05c5c;
+}
+/*serach*/
+.serach_menu{
+    background: #ffd338;
+    color: #fff;
+    border: 1px solid #fff; 
+    padding: 0px 0px;
+}
+.serach {
+    color: #fff;
+    background: #ffd338;
+    transition: .5s;
+    margin-right: 5px;
+    float: right;
+}
+.serach:hover {
+    color: #f05c5c;
+}
+.serach:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 255);
+}
+.btn-go{
+   color: #fff;
+    background: #ffd338; 
+}
+/*============ carousel Code CSS Part Start =============== */
+.banner{
+    background-image: url(../images/carousel.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.banner_content {
+    margin-top: 290px;
+    margin-bottom: 290px;
+}
+.banner_content h1 {
+    color: #1ec0ff;
+    font-size: 48px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+/*============ Education Code CSS Part Start =============== */
+/*section title*/
+.education {
+    padding: 80px 0;
+}
+.section_title h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.section_title hr {
+    border: none;
+    width: 250px;
+    border-bottom: 6px dotted #fff;
+    margin-left: 220px;
+}
+.section_title {
+    margin-bottom: 50px;
+}
+.scholl h2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+.scholl hr{
+    border: none;
+    border-bottom: 3px solid #ddd;
+    width: 170px;
+}
+.scholl img{
+    text-align: center;
+    margin-top: 50px;
+}
+/*============ Education1 Code CSS Part Start =============== */
+.education1{
+    background-image: url(../images/edu2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 80px 0;
+}
+.content_ducation h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 15px;
+}
+/*============ memories Code CSS Part Start =============== */
+.memories{
+  background-image: url(../images/memories-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 80px 0;   
+}
+/*============ Study Code CSS Part Start =============== */
+.study_icon i {
+    color: #1ec0ff;
+    font-size: 60px;
+}
+.study{
+    background: #f4f4f2;
+    padding: 80px 0;
+}
+.study_contnet h3 {
+    color: #1ec0ff;
+    font-size: 24px;
+}
+.study_contnet {
+    margin-bottom: 15px;
+}
+.study_contnet hr {
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+.study_icon1 h6 {
+    text-decoration: underline;
+}
+.study_icon p {
+    margin-top: 30px;
+    word-spacing: 10px;
+}
+/*============ What Code CSS Part Start =============== */
+.what{
+    background-image: url(../images/edu2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.counter_content span {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #ffff;
+}
+
+.counter_content h3 {
+    color: #ffff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+/*============ Event Code CSS Part Start =============== */
+.event{
+    padding: 80px 0;
+    background-color: #efefed;
+}
+.section_event h1{
+      font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.section_event hr {
+    border: none;
+    width: 250px;
+    border-bottom: 6px dotted #fff;
+}
+.section_event {
+    margin-bottom: 50px;
+}
+
+.event_content h3 {
+    font-size: 24px;
+}
+
+.event_content p {
+    color: #1ec0ff;
+}
+
+.event_content span {
+    color: #444;
+}
+.event_content hr {
+    border: none;
+    border-bottom: 2px dotted #1ec0ff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.event_content1 h3 {
+    font-size: 24px;
+}
+
+.event_content p {
+    color: #1ec0ff;
+}
+.event_content1 hr {
+    border: none;
+    border-bottom: 3px dotted #1ec0ff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 260px;
+}
+
+/*============ Contact Code CSS Part Start =============== */
+.contact{
+    background-image: url(../images/contact-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 227px;
+    padding-bottom: 70px;
+    
+}
+.contact_logo img {
+    margin-bottom: 50px;
+}
+
+.contact_logo span {
+    color: #1ec0ff;
+}
+
+.contact_logo i {
+    color: #1ec0ff;
+}
+.contact_logo ul li a {color: #333;
+    line-height: 45px;}
+/*instagram*/
+.contact_instagram h3 {
+    color: #ffc852;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.contact_instagram hr {
+    border: none;
+    border-bottom: 4px dotted #ffc852;
+    width: 130px;
+}
+.contact_instagram img {
+    margin-bottom: 5px;
+}
+/*contact us*/
+.contact_us h3{
+    color: #56d47e;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.contact_us hr {
+    border: none;
+    border-bottom: 4px dotted #56d47e;
+    width: 130px;
+}
+.contact_us ul li a {color: #333;
+    line-height: 45px;}
+.contact_us i {
+    color: #56d47e;
+}
+/*contact news*/
+.contact_news h3{
+    color: #f05c5c;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.contact_news hr {
+    border: none;
+    border-bottom: 4px dotted #f05c5c;
+    width: 130px;
+}
+.contact_us ul li a {color: #333;
+    line-height: 45px;}
+.contact_us i {
+    color: #56d47e;
+}
+.contact_news ul li a {
+    color: #ccc;
+}
+
+.contact_news ul li {
+    display: inline-block;
+    padding: 20px 10px;
+}
+/*============ Foooter Code CSS Part Start =============== */
+.footer {
+ background: #ffd338; 
+}
+.footer_content ul li {
+    display: inline;
+}
+
+.footer_content ul li a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    padding: 30px 16px;
+    text-transform: uppercase;
+    position: relative;
+}
+.footer_content ul li a::after {
+    position: absolute;
+    content: "|";
+    margin-left: 20px;
+}
+.content_right p {
+    color: #fff;
+    font-size: 18px;
+    padding: 30px 0;
+    text-transform: uppercase;
+}
